@@ -1,2 +1,2 @@
-# WebCRD-documentation-list
-A sortable and filterable table of documentation uusing vanilla JS
+# sortable-documentation-list
+A sortable and filterable table of documentation using vanilla JS
