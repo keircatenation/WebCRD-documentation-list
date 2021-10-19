@@ -1,0 +1,113 @@
+:root{
+    --yellow:#faa634;
+    --purple:#640060;
+    --doc-box-sr: #9d50a4;
+    --doc-box-ug: #6a49a6;
+    --doc-box-ta: #5465b7;
+    --doc-box-other: #327973;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.all-filters{
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS styles relating to the styling of the buttons on the page */
+.button{
+    text-decoration: none;
+    padding:10px;
+    color:white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid white;
+}
+.button.selected {
+    background-color: #efefef;
+    color: var(--purple);
+    border-color: var(--purple);
+}
+.button.filter-selected {
+    background-color: #efefef;
+    color: var(--purple);
+    border-color: var(--purple);
+}
+.all, .filter-button{
+    color: white;
+    background-color: var(--purple);
+}
+.training{
+    background-color: var(--doc-box-sr);
+}
+.task-aid{
+    background-color: var(--doc-box-ta);
+}
+.user-guide{
+    background-color: var(--doc-box-ug);
+}
+.system-doc{
+    background-color: var(--doc-box-other);
+}
+.table.button{
+    display:inline-block;
+    width:60px;
+    text-align: center;
+    color: black;
+    background-color: var(--yellow);
+    font-weight: bold;
+    border:none;
+    margin-right: 5px;
+}
+.button:hover{
+    filter: saturate(1.5);
+}
+
+/* CSS relating to the Advanced Filters box */
+
+.filter-box{
+    margin-top: .5rem;
+}
+.filters{
+    margin-top: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.filters label{
+    margin-right: 1rem;
+    line-height: 1.5rem;
+}
+.hidden{
+    display: none;
+}
+
+/* CSS related to the styling of the table */
+
+.arrow-sort{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.currently-sorted{
+    color:var(--purple);
+}
+
+table{
+    width:100%;
+    text-align: left;
+}
+tr{
+    height:2.75rem;
+}
+td{
+    padding:0 .75rem;
+}
+
