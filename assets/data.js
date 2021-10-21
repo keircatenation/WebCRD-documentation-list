@@ -1,4 +1,4 @@
-const listData = [
+export const listData = [
 	{
 		category: "System Document",
 		role: "Administrator",
