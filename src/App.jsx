@@ -12,13 +12,7 @@ function App() {
   return (
     <>
       <Filters
-        column={column}
-        setColumn={setColumn}
-        direction={direction}
-        setDirection={setDirection}
-        filterColumn={filterColumn}
         setFilterColumn={setFilterColumn}
-        filterName={filterName}
         setFilterName={setFilterName}
       />
       <Table

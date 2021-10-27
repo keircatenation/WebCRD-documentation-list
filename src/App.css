@@ -12,6 +12,14 @@ body{
   font-family: "Roboto", sans-serif;
 }
 
+main{
+  padding:1rem;
+}
+header, footer{
+  padding: 1rem;
+  background-color: var(--purple);
+}
+
 .all-filters{
   display: flex;
   flex-direction: column;

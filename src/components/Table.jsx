@@ -3,8 +3,8 @@ import RowItem from "./RowItem";
 
 export default function Table(props) {
     const {column, direction, filterColumn, filterName, setColumn, setDirection} = props;
+    
     let filteredList = listData.filter(item => {
-        // console.log(item)
         if (filterName) {
             return item[filterColumn] == filterName
         } else {
@@ -13,31 +13,23 @@ export default function Table(props) {
     })
 
     const sortTable = array => {
-        // console.log(array)
-        console.log(column, direction)
         if (direction) {
             return array.sort((a, b) => {
-                // console.log(column)
-                // console.log(a[column], b[column])
-                return 1
-                // return a[column].localeCompare(b[column]);
+                return a[column].localeCompare(b[column]);
             });
         } else {
             return array.sort((a, b) => {
-                // console.log(column)
-                // console.log(a[column], b[column])
-                return 1
-                // return a[column].localeCompare(b[column]);
+                return a[column].localeCompare(b[column]);
             }).reverse();
         }
     }
 
     const handleClick = (e) => {
-        console.log(e.target.firstChild.data.toLowerCase().replace(" ", ""))
-        if (e.target.firstChild.data.toLowerCase().replace(" ", "") == column){
+        console.log(e.target.value)
+        if (e.target.value == column){
             setDirection(!direction)
         } else {
-            setColumn(e.target.firstChild.data.toLowerCase().replace(" ", ""))
+            setColumn(e.target.value)
             setDirection(true)
         }
     }
@@ -47,15 +39,15 @@ export default function Table(props) {
             <thead>
                 <tr>
                     <th>
-                        <button className={column == "category"? "currently-sorted arrow-sort" : "arrow-sort"} onClick={handleClick}> Category {!direction && column=="category"? "▲" : "▼"}
+                        <button className={column == "category"? "currently-sorted arrow-sort" : "arrow-sort"} onClick={handleClick} value="category">Category {!direction && column=="category"? "▲" : "▼"}
                         </button>
                     </th>
                     <th>
-                        <button className={column == "role"? "currently-sorted arrow-sort" : "arrow-sort"} onClick={handleClick}> Role {!direction && column=="role"? "▲" : "▼"}
+                        <button className={column == "role"? "currently-sorted arrow-sort" : "arrow-sort"} onClick={handleClick} value="role">Role {!direction && column=="role"? "▲" : "▼"}
                         </button>
                     </th>
                     <th>
-                        <button className={column == "name"? "currently-sorted arrow-sort" : "arrow-sort"} onClick={handleClick}> Name {!direction && column=="name"? "▲" : "▼"}
+                        <button className={column == "name"? "currently-sorted arrow-sort" : "arrow-sort"} onClick={handleClick} value="name">Name {!direction && column=="name"? "▲" : "▼"}
                         </button>
                     </th>
                     <th>Links</th>
@@ -64,7 +56,6 @@ export default function Table(props) {
             <tbody>
                 {
                     sortTable(filteredList).map(item => {
-                        // console.log(item)
                         let index= filteredList.indexOf(item)
                         return <RowItem item={item} index={index} key={index}/>
                     })

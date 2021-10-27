@@ -11,45 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Header Information</h1>
-    <p>All the typical information on your page!</p>
-    <hr/>
-    <section id="root"></section>
-    <div class="all-filters">
-        <div id="filter-buttons">
-            <button id="no-filter" class="button selected all">All</button>
-            <button id="system-doc-filter" class="button system-doc">System Documents</button>
-            <button id="task-aids-filter" class="button task-aid">Task Aids</button>
-            <button id="training-filter" class="button training">Training</button>
-            <button id="user-guides-filter" class="button user-guide">User Guides</button>
-            <button id="advanced-filters-button" class="button filter-button" onclick="showAdvancedFilters()">Filter by Role</button>
-        </div>
-            
-        <div id="advanced-filters" class="filter-box hidden">
-            <div class="filters">
-                <label for="no-role">
-                    <input type="radio" id="no-role" value="" checked="true" name="role-filters" /> All</label>
-                <label for="administrator">
-                    <input type="radio" id="administrator" value="Administrator" name="role-filters" /> Administrator</label>
-                <label for="approval">
-                    <input type="radio" id="approval" value="Approval" name="role-filters" /> Approval</label>
-                <label for="autostock">
-                    <input type="radio" id="autostock" value="AutoStock" name="role-filters" /> AutoStock</label>
-                <label for="impactVDP">
-                    <input type="radio" id="impactVDP" value="ImpactVDP" name="role-filters" /> ImpactVDP</label>
-                <label for="invoicing">
-                    <input type="radio" id="invoicing" value="Invoicing" name="role-filters" /> Invoicing</label>
-                <label for="production">
-                    <input type="radio" id="production" value="Production" name="role-filters" /> Production</label>
-                <label for="review">
-                    <input type="radio" id="review" value="Review" name="role-filters" /> Review</label>
-                <label for="site">
-                    <input type="radio" id="site" value="Site" name="role-filters" /> Site</label>
-                <label for="workgroup-catalogs">
-                    <input type="radio" id="workgroup-catalogs" value="Workgroup &amp; Catalogs" name="role-filters" /> Workgroup and Catalogs</label>
-            </div>
-        </div>
-    </div>
+    <header></header>
+    <main>
+        <h1>Sortable & filterable table list</h1>
+        <p>This sortable and filterable documentation table can be sorted alphabetically and reverse-alphabetically, and filtered by the first two columns in the table.</p>
+        <hr/>
+        <section id="root"></section>
+    </main>
+    <footer></footer>
     <script type="module" src="/src/main.jsx"></script>
     
 </body>
