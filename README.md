@@ -1,5 +1,5 @@
 # sortable-documentation-list
-A sortable and filterable table of documentation using vanilla JS
+A sortable and filterable table of documentation using vanilla JS. [Find live here!](https://keircatenation.github.io/sortable-documentation-list/)
 
 ## branch: main
 An implementation using vanilla JS.
